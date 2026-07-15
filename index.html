@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Miranda — Cybersecurity & Software Developer</title>
+  <meta name="description" content="Portfolio of Pedro Miranda — Computer Science student specializing in Cybersecurity, Software Development, and AI. Based in Recife, Brazil." />
+  <meta name="keywords" content="Pedro Miranda, Cybersecurity, Java Developer, Portfolio, AI, Computer Science" />
+  <meta name="author" content="Pedro Miranda" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pedro Miranda — Cybersecurity & Software Developer" />
+  <meta property="og:description" content="Immersive portfolio showcasing expertise in Cybersecurity, Java/Spring Boot, and AI." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-glitch" data-text="PM">PM</div>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-text">Initializing System<span class="preloader-dots">...</span></div>
+    </div>
+  </div>
+
+  <!-- Grain Overlay -->
+  <div id="grain-overlay"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="glass-nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>PM<span class="logo-bracket">/&gt;</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn-brutal btn-small">Let's Talk</a>
+    </div>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#hero" class="mobile-link" data-section="hero">Home</a>
+    <a href="#about" class="mobile-link" data-section="about">About</a>
+    <a href="#experience" class="mobile-link" data-section="experience">Experience</a>
+    <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+    <a href="#education" class="mobile-link" data-section="education">Education</a>
+    <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+  </div>
+
+  <!-- Three.js Canvas -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span class="tag-text">Available for opportunities</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-line hero-line-1">
+          <span class="char-wrap" data-char="P">P</span><span class="char-wrap" data-char="E">E</span><span class="char-wrap" data-char="D">D</span><span class="char-wrap" data-char="R">R</span><span class="char-wrap" data-char="O">O</span>
+        </span>
+        <span class="hero-line hero-line-2">
+          <span class="char-wrap" data-char="M">M</span><span class="char-wrap" data-char="I">I</span><span class="char-wrap" data-char="R">R</span><span class="char-wrap" data-char="A">A</span><span class="char-wrap" data-char="N">N</span><span class="char-wrap" data-char="D">D</span><span class="char-wrap" data-char="A">A</span>
+        </span>
+      </h1>
+      <div class="hero-subtitle-wrap">
+        <div class="hero-subtitle glass-panel">
+          <span class="subtitle-icon">🛡️</span>
+          <span>Cybersecurity</span>
+          <span class="subtitle-sep">×</span>
+          <span class="subtitle-icon">⚡</span>
+          <span>Software Dev</span>
+          <span class="subtitle-sep">×</span>
+          <span class="subtitle-icon">🧠</span>
+          <span>AI</span>
+        </div>
+      </div>
+      <p class="hero-description">
+        Computer Science student crafting secure, intelligent software solutions.<br>
+        <span class="highlight-text">Based in Recife, Brazil</span> — building the future of tech.
+      </p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn-brutal btn-primary" id="hero-cta-explore">
+          <span>Explore My Work</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn-brutal btn-outline" id="hero-cta-contact">
+          <span>Get in Touch</span>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" class="section about-section">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title kinetic-title" data-text="ABOUT ME">ABOUT ME</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text-col">
+        <div class="about-card glass-card" id="about-card-1">
+          <div class="card-accent" style="--accent: var(--primary)"></div>
+          <h3>Who I Am</h3>
+          <p>
+            I'm a <strong>Computer Science student</strong> in my 7th semester at UNINASSAU, 
+            with a multidisciplinary profile focused on <span class="text-highlight orange">Cybersecurity</span>, 
+            <span class="text-highlight teal">Software Development</span>, and 
+            <span class="text-highlight yellow">Artificial Intelligence</span>.
+          </p>
+        </div>
+        <div class="about-card glass-card" id="about-card-2">
+          <div class="card-accent" style="--accent: var(--accent-2)"></div>
+          <h3>What I Do</h3>
+          <p>
+            Currently serving as <strong>President & Education Director at LASIC</strong>, 
+            where I lead technical initiatives, coordinate cybersecurity workshops, and mentor 
+            members on security best practices. I bring hands-on experience in backend development 
+            with Java & Spring Boot, computer vision integration, and forensic data analysis.
+          </p>
+        </div>
+        <div class="about-card glass-card" id="about-card-3">
+          <div class="card-accent" style="--accent: var(--accent-1)"></div>
+          <h3>My Approach</h3>
+          <p>
+            I apply <strong>Security by Design</strong> principles and agile methodologies to everything 
+            I build. With 2+ years in technical support and academic mentoring, I bring strong 
+            analytical thinking, technical leadership, and a relentless focus on solving complex 
+            infrastructure and software problems.
+          </p>
+        </div>
+      </div>
+      <div class="about-stats-col">
+        <div class="stat-card brutal-card" id="stat-1">
+          <span class="stat-number" data-target="7">0</span>
+          <span class="stat-label">Semester</span>
+          <span class="stat-sub">Computer Science</span>
+        </div>
+        <div class="stat-card brutal-card" id="stat-2">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Years</span>
+          <span class="stat-sub">Technical Experience</span>
+        </div>
+        <div class="stat-card brutal-card" id="stat-3">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Roles</span>
+          <span class="stat-sub">Professional Positions</span>
+        </div>
+        <div class="stat-card brutal-card" id="stat-4">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Certs</span>
+          <span class="stat-sub">Courses & Certifications</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EXPERIENCE SECTION ====== -->
+  <section id="experience" class="section experience-section">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title kinetic-title" data-text="EXPERIENCE">EXPERIENCE</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <!-- Experience 1 -->
+      <div class="timeline-item" id="exp-1">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line"></div>
+        </div>
+        <div class="timeline-card brutal-card" style="--card-color: var(--primary)">
+          <div class="timeline-date">
+            <span class="date-badge">Oct 2025 — Present</span>
+          </div>
+          <h3 class="timeline-role">President & Education Director</h3>
+          <h4 class="timeline-company">LASIC — Academic League of Information Security & Cybersecurity</h4>
+          <ul class="timeline-details">
+            <li>Strategic leadership of educational and technical initiatives</li>
+            <li>Planning & executing workshops on Pentesting, Networks/Protocols, Firewalls</li>
+            <li>Mentoring members on security best practices (MFA, access control)</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag-brutal">Leadership</span>
+            <span class="tag-brutal">Pentesting</span>
+            <span class="tag-brutal">Mentoring</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="timeline-item" id="exp-2">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line"></div>
+        </div>
+        <div class="timeline-card brutal-card" style="--card-color: var(--accent-3)">
+          <div class="timeline-date">
+            <span class="date-badge">Sep 2025 — Jan 2026</span>
+          </div>
+          <h3 class="timeline-role">Computer Forensics Research Assistant</h3>
+          <h4 class="timeline-company">UPE — Universidade de Pernambuco</h4>
+          <ul class="timeline-details">
+            <li>System log analysis and network traffic monitoring for vulnerability identification</li>
+            <li>Support in security audits, compliance, and digital evidence preservation</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag-brutal">Forensics</span>
+            <span class="tag-brutal">Log Analysis</span>
+            <span class="tag-brutal">Security Audit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="timeline-item" id="exp-3">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line"></div>
+        </div>
+        <div class="timeline-card brutal-card" style="--card-color: var(--accent-2)">
+          <div class="timeline-date">
+            <span class="date-badge">Apr 2025 — Sep 2025</span>
+          </div>
+          <h3 class="timeline-role">Collaborator — BoraVer (AI & Computer Vision)</h3>
+          <h4 class="timeline-company">Research & Development Project</h4>
+          <ul class="timeline-details">
+            <li>Development of assistive AI application for visually impaired users</li>
+            <li>Implementation of hybrid architecture (edge + server) with real-time computer vision</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag-brutal">AI</span>
+            <span class="tag-brutal">Computer Vision</span>
+            <span class="tag-brutal">Accessibility</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 4 -->
+      <div class="timeline-item" id="exp-4">
+        <div class="timeline-marker">
+          <div class="marker-dot"></div>
+          <div class="marker-line"></div>
+        </div>
+        <div class="timeline-card brutal-card" style="--card-color: var(--accent-1)">
+          <div class="timeline-date">
+            <span class="date-badge">Apr 2024 — Sep 2024</span>
+          </div>
+          <h3 class="timeline-role">Java Developer Intern</h3>
+          <h4 class="timeline-company">Compass UOL</h4>
+          <ul class="timeline-details">
+            <li>Development of RESTful APIs using Java and Spring Boot</li>
+            <li>Applied OOP principles, Clean Code, and Agile methodologies (Scrum)</li>
+            <li>Testing, QA validation, and system performance optimization</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag-brutal">Java</span>
+            <span class="tag-brutal">Spring Boot</span>
+            <span class="tag-brutal">REST APIs</span>
+            <span class="tag-brutal">Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SKILLS SECTION ====== -->
+  <section id="skills" class="section skills-section">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title kinetic-title" data-text="SKILLS">SKILLS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <!-- Development -->
+      <div class="skill-category brutal-card skill-card" id="skill-dev" style="--card-color: var(--primary)">
+        <div class="skill-icon">⚡</div>
+        <h3>Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Java (Spring Boot)</span>
+          <span class="skill-tag">APIs REST</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">Modular Architecture</span>
+          <span class="skill-tag">Clean Code</span>
+          <span class="skill-tag">Git</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="90"></div>
+        </div>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="skill-category brutal-card skill-card" id="skill-sec" style="--card-color: var(--accent-3)">
+        <div class="skill-icon">🛡️</div>
+        <h3>Cybersecurity</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Web Pentest</span>
+          <span class="skill-tag">CIA Triad</span>
+          <span class="skill-tag">MFA / Access Control</span>
+          <span class="skill-tag">Cryptography</span>
+          <span class="skill-tag">Digital Forensics</span>
+          <span class="skill-tag">Governance</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="85"></div>
+        </div>
+      </div>
+
+      <!-- AI & Data -->
+      <div class="skill-category brutal-card skill-card" id="skill-ai" style="--card-color: var(--accent-2)">
+        <div class="skill-icon">🧠</div>
+        <h3>AI & Data</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">AI Model Integration</span>
+          <span class="skill-tag">Log Analysis</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="75"></div>
+        </div>
+      </div>
+
+      <!-- Networks -->
+      <div class="skill-category brutal-card skill-card" id="skill-net" style="--card-color: var(--accent-1)">
+        <div class="skill-icon">🌐</div>
+        <h3>Networks & Systems</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">DNS</span>
+          <span class="skill-tag">Linux (Kali)</span>
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">VPNs</span>
+          <span class="skill-tag">Network Infra</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="80"></div>
+        </div>
+      </div>
+
+      <!-- Methodologies -->
+      <div class="skill-category brutal-card skill-card" id="skill-method" style="--card-color: #8B5CF6">
+        <div class="skill-icon">📋</div>
+        <h3>Methodologies</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">Kanban</span>
+          <span class="skill-tag">Technical Documentation</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="85"></div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="skill-category brutal-card skill-card" id="skill-lang" style="--card-color: #EC4899">
+        <div class="skill-icon">🗣️</div>
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Portuguese — Native</span>
+          <span class="skill-tag">English — Intermediate/Advanced</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" data-width="80"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EDUCATION SECTION ====== -->
+  <section id="education" class="section education-section">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title kinetic-title" data-text="EDUCATION">EDUCATION</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="education-grid">
+      <!-- Degree -->
+      <div class="edu-card glass-card edu-main" id="edu-degree">
+        <div class="edu-icon-wrap">
+          <span class="edu-icon">🎓</span>
+        </div>
+        <h3>Bachelor's in Computer Science</h3>
+        <h4>UNINASSAU — Recife, PE</h4>
+        <p class="edu-detail">Expected graduation: 2026</p>
+        <div class="edu-badge">In Progress — 7th Semester</div>
+      </div>
+
+      <!-- Monitoria -->
+      <div class="edu-card glass-card" id="edu-monitor">
+        <div class="edu-icon-wrap">
+          <span class="edu-icon">👨‍🏫</span>
+        </div>
+        <h3>Academic Monitor (2+ years)</h3>
+        <h4>UNINASSAU</h4>
+        <p class="edu-detail">
+          Teaching support in Programming Logic, Data Structures, and Object-Oriented Programming. 
+          Mentoring, code review, and pedagogical support.
+        </p>
+      </div>
+
+      <!-- Certifications -->
+      <div class="edu-certs">
+        <h3 class="certs-title">Certifications & Courses</h3>
+        <div class="cert-stack">
+          <div class="cert-card brutal-card" style="--card-color: var(--accent-3)">
+            <span class="cert-icon">🔓</span>
+            <div class="cert-info">
+              <strong>Pentest: Exploiting Web Application Vulnerabilities</strong>
+              <span>Alura</span>
+            </div>
+          </div>
+          <div class="cert-card brutal-card" style="--card-color: var(--primary)">
+            <span class="cert-icon">☕</span>
+            <div class="cert-info">
+              <strong>Java Development: First Application & OOP</strong>
+              <span>Alura</span>
+            </div>
+          </div>
+          <div class="cert-card brutal-card" style="--card-color: var(--accent-2)">
+            <span class="cert-icon">🌐</span>
+            <div class="cert-info">
+              <strong>HTTP: Understanding the Web Under the Hood</strong>
+              <span>Alura</span>
+            </div>
+          </div>
+          <div class="cert-card brutal-card" style="--card-color: var(--accent-1)">
+            <span class="cert-icon">🔄</span>
+            <div class="cert-info">
+              <strong>Scrum & Agile Methodologies</strong>
+              <span>Certification</span>
+            </div>
+          </div>
+          <div class="cert-card brutal-card" style="--card-color: #8B5CF6">
+            <span class="cert-icon">💻</span>
+            <div class="cert-info">
+              <strong>Programming Logic with JavaScript</strong>
+              <span>Alura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title kinetic-title" data-text="CONTACT">CONTACT</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-content">
+      <div class="contact-text">
+        <h3 class="contact-headline">Let's Build <br><span class="text-gradient">Something Amazing</span></h3>
+        <p>I'm always open to new opportunities, collaborations, and challenges. Whether you need a cybersecurity specialist, a Java developer, or an AI enthusiast — let's connect.</p>
+      </div>
+      <div class="contact-cards">
+        <a href="mailto:pedromarinho243@hotmail.com" class="contact-card brutal-card" id="contact-email" style="--card-color: var(--primary)">
+          <span class="contact-icon">📧</span>
+          <div class="contact-info">
+            <strong>Email</strong>
+            <span>pedromarinho243@hotmail.com</span>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+        <a href="tel:+5575988613955" class="contact-card brutal-card" id="contact-phone" style="--card-color: var(--accent-2)">
+          <span class="contact-icon">📱</span>
+          <div class="contact-info">
+            <strong>Phone</strong>
+            <span>+55 75 98861-3955</span>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/pedromiranda243" target="_blank" rel="noopener" class="contact-card brutal-card" id="contact-linkedin" style="--card-color: #0077B5">
+          <span class="contact-icon">💼</span>
+          <div class="contact-info">
+            <strong>LinkedIn</strong>
+            <span>linkedin.com/in/pedromiranda243</span>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+        <a href="https://github.com/PedroMiranda243" target="_blank" rel="noopener" class="contact-card brutal-card" id="contact-github" style="--card-color: #F0F0F0">
+          <span class="contact-icon">🐙</span>
+          <div class="contact-info">
+            <strong>GitHub</strong>
+            <span>github.com/PedroMiranda243</span>
+          </div>
+          <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+      </div>
+      <div class="contact-availability">
+        <span class="avail-dot"></span>
+        <span>Available for travel & relocation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Pedro Miranda<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-text">Designed & built with passion — 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/PedroMiranda243" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/pedromiranda243" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:pedromarinho243@hotmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
